@@ -1910,3 +1910,9 @@ body.menu-open {
     transform: none;
   }
 }
+/* Fix: Hide mobile navigation on laptop/desktop */
+@media (min-width: 1025px) {
+  .mobile-drawer {
+    display: none !important;
+  }
+}
