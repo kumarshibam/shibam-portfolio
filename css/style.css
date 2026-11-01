@@ -1881,3 +1881,84 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(46, 160, 67, 0.25);
 }
+
+/* Smooth experience across devices */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Smooth mobile and iPad menu */
+@media (max-width: 1024px) {
+    .mobile-drawer {
+        display: flex !important;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+
+        transform: translateX(-50%) translateY(10px) scale(0.98);
+
+        transition:
+            opacity 0.28s ease,
+            transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+            visibility 0.32s ease;
+
+        /* Keep the glass look without blurring the background */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+
+        will-change: opacity, transform;
+    }
+
+    .mobile-drawer.open {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    .mobile-drawer a {
+        transition:
+            background 0.25s ease,
+            color 0.25s ease,
+            transform 0.25s ease;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .mobile-drawer a:active {
+        transform: scale(0.96);
+    }
+
+    .mobile-menu-btn,
+    #closeDrawerBtn,
+    .ios-btn,
+    .linkedin-hero-pill,
+    .github-btn {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
+}
