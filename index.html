@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Portfolio of Shibam Ku. Behera — Full Stack Developer. Apple iOS dark mode aesthetic with interactive widgets and modern web tech." />
+  <meta name="theme-color" content="#000000" />
+  <title>Shibam Behera — Full Stack Developer</title>
+
+  <!-- Google Fonts: Inter & JetBrains Mono for iOS / SF Pro look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Background Fluid Particle Canvas -->
+  <canvas id="mesh-canvas"></canvas>
+  <div class="ambient-aurora"></div>
+
+  <!-- Header and navigation -->
+  <div class="header-anchor">
+
+    <!-- Dynamic Island -->
+    <div class="dynamic-island" id="dynamicIsland">
+      <div class="island-avatar">
+        <span>SB</span>
+        <div class="island-pulse"></div>
+      </div>
+      <div class="island-status">
+        <span class="island-title">Shibam Behera</span>
+        <span class="island-sub">Open for new opportunities</span>
+      </div>
+      <div class="island-clock" id="islandClock">--:--</div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <!-- Desktop navigation -->
+    <nav class="ios-dock-nav" id="dockNav" aria-label="Main Navigation">
+      <a href="#home" class="dock-link active" data-sound="tap">Home</a>
+      <a href="#about" class="dock-link" data-sound="tap">About</a>
+      <a href="#experience" class="dock-link" data-sound="tap">Experience</a>
+      <a href="#education" class="dock-link" data-sound="tap">Education</a>
+      <a href="#skills" class="dock-link" data-sound="tap">Skills</a>
+      <a href="#projects" class="dock-link" data-sound="tap">Projects</a>
+      <a href="#certificates" class="dock-link" data-sound="tap">Certificates</a>
+      <a href="#contact" class="dock-link dock-cta" data-sound="tap">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile navigation -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button style="position: absolute; top: 25px; right: 25px; color:#fff; font-size:1.8rem;" id="closeDrawerBtn">✕</button>
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#education" class="mobile-link">Education</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#certificates" class="mobile-link">Certificates</a>
+    <a href="#contact" class="mobile-link" style="color:var(--siri-cyan);">Contact</a>
+  </div>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero-section" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="hero-badge-pill">
+            <span class="haptic-dot"></span>
+            <span>CODE · DESIGN · INNOVATION</span>
+          </div>
+
+          <h2 class="hero-title">
+            Hi, I'm <br />
+            <span class="siri-text-gradient">Shibam Behera</span>
+          </h2>
+
+          <div class="hero-subtitle">
+            <span>Full Stack Developer</span>
+            <span class="tag-pill">UI/UX &amp; Web Designer</span>
+          </div>
+
+          <p class="hero-statement">
+            "I build modern, responsive and user-focused digital experiences."
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="ios-btn ios-btn-primary" data-sound="action">
+              <span>Explore My Work</span>
+              <span>↗</span>
+            </a>
+            <a href="./assets/Shibam_CV.pdf"
+              download="Shibam_Behera_CV.pdf"
+              class="ios-btn ios-btn-secondary"
+              data-sound="action">
+              <span>↓</span>
+              <span>Download CV</span>
+            </a>
+            <a href="#contact" class="ios-btn ios-btn-secondary" data-sound="tap">
+              <span>Let's Talk</span>
+              <span>→</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shibam-behera-b652251b6/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="linkedin-hero-pill"
+              data-sound="tap"
+            >
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/YOUR_USERNAME"
+   target="_blank"
+   class="github-btn"
+   data-sound="tap">
+    <i class="fa-brands fa-github"></i>
+    <span>GitHub</span>
+</a>
+          </div>
+        </div>
+
+        
+
+        <!-- Siri-style orb -->
+        <div class="hero-hologram-card bento-card">
+          <div class="siri-orb-container">
+            <div class="siri-orb-glow"></div>
+          <div class="siri-orb-disc coding-ball">
+
+  <span class="coding-symbol">&lt;/&gt;</span>
+</div>
+          </div>
+          <div class="hologram-status-pill">
+            <span style="color:var(--siri-green)">●</span>
+            <span>Building Digital Experiences · Crafting Tomorrow</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-eyebrow">Overview</div>
+        <h2 class="section-title">Designed with <span class="siri-text-gradient">Precision.</span></h2>
+        <p class="section-desc">A deep passion for crafting thoughtful, accessible interfaces and scalable web foundations.</p>
+
+        <div class="about-bento">
+          <!-- About details -->
+          <div class="bento-card about-lead-card">
+            <div>
+              <div class="quote-mark">“</div>
+              <div class="about-bio-text">
+                <p>
+                  I am a collaborative Full Stack Web Developer with a solid understanding of HTML, CSS, JavaScript, Next.js, React and UI/UX design.
+                </p>
+                <p>
+                  I am passionate about crafting well-structured and visually consistent websites that prioritize user experience.
+                </p>
+                <p>
+                  My background also includes strong skills in Microsoft Excel, enabling effective data handling.
+                </p>
+                <p>
+                  I am eager to connect with fellow developers and contribute to dynamic teams, always looking for opportunities to learn and grow within the ever-evolving landscape of web development.
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Key strengths -->
+            <div class="bento-metrics-row">
+              <div class="metric-item">
+                <div class="metric-value" style="color:var(--siri-cyan);">Modern</div>
+                <div class="metric-label">Frontend Stack</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value" style="color:var(--siri-purple);">Clean</div>
+                <div class="metric-label">UI/UX Heuristics</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value" style="color:var(--siri-green);">Agile</div>
+                <div class="metric-label">Data Analysis</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills and design widgets -->
+          <div class="about-side-stack">
+            <!-- Excel widget -->
+            <div class="bento-card">
+              <div class="widget-header">
+                <span class="widget-title">
+                  <span style="color:var(--siri-green);">▦</span>
+                  <span>Microsoft Excel &amp; Data Agility</span>
+                </span>
+                <span class="widget-badge">Data Handling</span>
+              </div>
+              <div class="excel-mini-sheet">
+                <div class="sheet-row sheet-header">
+                  <span>ID</span>
+                  <span>Component</span>
+                  <span>Status</span>
+                </div>
+                <div class="sheet-row">
+                  <span>01</span>
+                  <span>Data Structuring</span>
+                  <span style="color:var(--siri-green)">Proficient</span>
+                </div>
+                <div class="sheet-row">
+                  <span>02</span>
+                  <span>Formulas &amp; Analysis</span>
+                  <span style="color:var(--siri-green)">Advanced</span>
+                </div>
+                <div class="sheet-row">
+                  <span>03</span>
+                  <span>Data Cleaning</span>
+                  <span style="color:var(--siri-cyan)">High Precision</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Design widget -->
+            <div class="bento-card">
+              <div class="widget-header">
+                <span class="widget-title">
+                  <span style="color:var(--siri-purple);">✳</span>
+                  <span>UI / UX Design Philosophy</span>
+                </span>
+                <span class="widget-badge">Design with Purpose</span>
+              </div>
+              <p style="font-size:0.86rem; color:var(--text-secondary); line-height: 1.6;">
+               I believe great design is about simplicity, clarity and consistency. From thoughtful spacing and clean typography to smooth interactions and adaptable layouts, every element is designed to create a seamless experience across devices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience section -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-eyebrow">Professional Exposure</div>
+        <h2 class="section-title">Industry <span class="siri-text-gradient">Experience.</span></h2>
+        <p class="section-desc">Practical exposure to enterprise technology operations and infrastructure.</p>
+
+        <div class="experience-wallet-card bento-card">
+          <div class="wallet-chip"></div>
+
+          <div class="experience-header">
+            <div>
+              <h3 class="org-name">Epsilon Carbon Ashoka Pvt. Ltd.</h3>
+              <div class="org-dept">IT Infrastructure Department</div>
+            </div>
+            <div class="org-location-badge">
+              <span>📍</span>
+              <span>Jharsuguda, Odisha</span>
+            </div>
+          </div>
+
+          <div class="pass-details-grid">
+            <div>
+              <div class="pass-field-label">Domain</div>
+              <div class="pass-field-value">IT Infrastructure &amp; Systems</div>
+            </div>
+            <div>
+              <div class="pass-field-label">Location Base</div>
+              <div class="pass-field-value">Jharsuguda</div>
+            </div>
+            <div>
+              <div class="pass-field-label">Industry</div>
+              <div class="pass-field-value">Chemical Manufacturing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education section -->
+    <section id="education">
+      <div class="wrap">
+        <div class="section-eyebrow">Academic Milestones</div>
+        <h2 class="section-title">Education <span class="siri-text-gradient">Timeline.</span></h2>
+        <p class="section-desc">The academic journey shaping my engineering mindset and problem-solving skills.</p>
+
+        <div class="timeline-container">
+          <!-- MCA -->
+          <div class="timeline-card-item">
+            <div class="timeline-indicator">🎓</div>
+            <div class="timeline-body">
+              <span class="timeline-badge">Post Graduation</span>
+              <h3 class="timeline-degree">MCA (Master of Computer Applications)</h3>
+              <p class="timeline-institution">Sikkim Manipal University</p>
+            </div>
+          </div>
+
+          <!-- Graduation -->
+          <div class="timeline-card-item">
+            <div class="timeline-indicator">🏛️</div>
+            <div class="timeline-body">
+              <span class="timeline-badge">Graduation</span>
+              <h3 class="timeline-degree">BSC Computer Science</h3>
+              <p class="timeline-institution">Gangadhar Meher University, Sambalpur</p>
+            </div>
+          </div>
+
+          <!-- Class 12 -->
+          <div class="timeline-card-item">
+            <div class="timeline-indicator">📚</div>
+            <div class="timeline-body">
+              <span class="timeline-badge">Higher Secondary · 12th</span>
+              <h3 class="timeline-degree">Senior Secondary Education</h3>
+              <p class="timeline-institution">National Institute Of Open Schooling</p>
+            </div>
+          </div>
+
+          <!-- Class 10 -->
+          <div class="timeline-card-item">
+            <div class="timeline-indicator">🏫</div>
+            <div class="timeline-body">
+              <span class="timeline-badge">Secondary · 10th</span>
+              <h3 class="timeline-degree">Secondary Education</h3>
+              <p class="timeline-institution">Aditya Residential School, Sambalpur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Skills section -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-eyebrow">Toolkit &amp; Frameworks</div>
+
+    <h2 class="section-title">
+      Technical <span class="siri-text-gradient">Skills.</span>
+    </h2>
+
+    <p class="section-desc">
+      Proficiencies in modern frontend, web technologies, and essential software tools.
+    </p>
+
+    <div class="skills-app-grid">
+
+      <!-- HTML -->
+      <div class="app-icon-card bento-card">
+        <div class="app-squircle icon-html">&lt;/&gt;</div>
+        <div class="app-info">
+          <div class="app-title">HTML5</div>
+          <div class="app-category">Semantic Markup</div>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="app-icon-card bento-card">
+        <div class="app-squircle icon-css">#</div>
+        <div class="app-info">
+          <div class="app-title">CSS3</div>
+          <div class="app-category">Modern Layouts &amp; Animation</div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="app-icon-card bento-card">
+        <div class="app-squircle icon-js">JS</div>
+        <div class="app-info">
+          <div class="app-title">JavaScript</div>
+          <div class="app-category">ES6+ &amp; Interactive Logic</div>
+        </div>
+      </div>
+
+      <!-- React -->
+      <div class="app-icon-card bento-card">
+        <div class="app-squircle icon-react">⚛</div>
+        <div class="app-info">
+          <div class="app-title">React.js</div>
+          <div class="app-category">Component Architecture</div>
+        </div>
+      </div>
+
+      <!-- Next.js -->
+      <div class="app-icon-card bento-card">
+        <div class="app-squircle icon-next">N</div>
+        <div class="app-info">
+          <div class="app-title">Next.js</div>
+          <div class="app-category">SSR &amp; Full Stack React</div>
+        </div>
+      </div>
+
+      <!-- UI/UX -->
+      <div class="app-icon-card bento-card">
+        <div class="app-squircle icon-uiux">✦</div>
+        <div class="app-info">
+          <div class="app-title">UI/UX Design</div>
+          <div class="app-category">Human Centered Interfaces</div>
+        </div>
+      </div>
+
+      <!-- Excel -->
+      <div class="app-icon-card bento-card">
+        <div class="app-squircle icon-excel">X</div>
+        <div class="app-info">
+          <div class="app-title">Microsoft Excel</div>
+          <div class="app-category">Data Handling &amp; Calculation</div>
+        </div>
+      </div>
+
+      <!-- Microsoft Office -->
+      <div class="app-icon-card bento-card">
+        <div class="app-squircle icon-office">
+          <div class="office-logo">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="app-info">
+          <div class="app-title">Microsoft Office Suite</div>
+          <div class="app-category">Word · Excel · PowerPoint</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Projects section -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-eyebrow">Portfolio Works</div>
+        <h2 class="section-title">Featured <span class="siri-text-gradient">Projects.</span></h2>
+        <p class="section-desc">A showcase of ongoing digital creations and experiments.</p>
+
+        <div class="keynote-teaser-card bento-card">
+          <div class="keynote-glow-ring">
+            <svg width="48" height="48" fill="none" stroke="#ffffff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="keynote-teaser-title">Something Amazing Is Coming Soon!</h3>
+          <p class="keynote-teaser-sub">Currently working on building new experiences. Stay tuned!</p>
+          <div class="keynote-pill-tag">
+            <span>●</span>
+            <span>Active Development Cycle</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates section -->
+    <section id="certificates">
+      <div class="wrap">
+        <div class="section-eyebrow">Credentials</div>
+        <h2 class="section-title">Certificates &amp; <span class="siri-text-gradient">Recognitions.</span></h2>
+        <p class="section-desc">Professional learning, technical certifications and continuous growth.</p>
+
+        <div class="cert-grid">
+          <div class="cert-card bento-card">
+            <div>
+              <span class="timeline-badge">Completed</span>
+              <h3 class="cert-title">AI Tools &amp; Claude Workshop</h3>
+              <p class="cert-issuer">Issuing Organization: be10x</p>
+              <div class="cert-preview">
+                <img
+                  src="./assets/be10x-certificate-preview.png"
+                  alt="AI Tools and Claude Workshop certificate awarded to Shibam Kumar Behera">
+              </div>
+            </div>
+            <a
+              href="./assets/be10x-certificate.pdf"
+              download="Shibam_AI_Tools_Certificate.pdf"
+              class="ios-btn ios-btn-secondary cert-download-btn">
+              ↓ Download Certificate
+            </a>
+          </div>
+
+          <div class="cert-card bento-card">
+            <div>
+              <span class="timeline-badge">Upcoming</span>
+              <h3 class="cert-title">More Achievements Ahead</h3>
+              <p class="cert-issuer">Exploring New Learning Opportunities</p>
+              <p class="cert-upcoming-copy">
+                Continuously learning, developing new skills and looking forward to future milestones.
+              </p>
+            </div>
+            <div class="cert-upcoming-footer">✦ Stay Tuned</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-eyebrow">Get in Touch</div>
+        <h2 class="section-title">Let's Build Something <span class="siri-text-gradient">Together.</span></h2>
+        <p class="section-desc">Have an idea, an opportunity, or just want to connect? I'd love to hear from you.</p>
+
+        <div class="contact-grid">
+          <!-- Contact details -->
+          <div class="contact-info-card bento-card">
+            <div>
+              <h3 style="font-size:1.4rem; font-weight:700; color:#fff; margin-bottom:10px;">Reach Out Directly</h3>
+              <p style="color:var(--text-secondary); font-size:0.95rem; line-height: 1.6;">
+                I'm currently eager to connect with engineering teams, fellow developers, and collaborative innovators.
+              </p>
+
+              <div class="contact-pill-list">
+                <a
+                  href="https://www.linkedin.com/in/shibam-behera-b652251b6/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-pill-item"
+                  data-sound="tap"
+                >
+                  <div class="contact-icon-bubble">in</div>
+                  <div>
+                    <div style="font-size:0.72rem; color:var(--text-secondary); text-transform:uppercase; font-family:'JetBrains Mono',monospace;">LinkedIn</div>
+                    <div style="font-size:0.95rem; font-weight:600; color:#fff;">shibam-behera-b652251b6 ↗</div>
+                  </div>
+                </a>
+
+                <a
+  href="https://www.instagram.com/YOUR_USERNAME/"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="contact-pill-item"
+  data-sound="tap"
+>
+  <div class="contact-icon-bubble instagram-icon">
+  <svg viewBox="0 0 24 24" width="22" height="22"
+       fill="none" stroke="currentColor" stroke-width="1.8"
+       stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="5"/>
+    <circle cx="12" cy="12" r="4"/>
+    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+  </svg>
+</div>
+  <div>
+    <div style="font-size:0.72rem; color:var(--text-secondary); text-transform:uppercase; font-family:'JetBrains Mono',monospace;">
+      Instagram
+    </div>
+    <div style="font-size:0.95rem; font-weight:600; color:#fff;">
+      Follow Me ↗
+    </div>
+  </div>
+</a>
+
+                <div class="contact-pill-item">
+                  <div class="contact-icon-bubble">📍</div>
+                  <div>
+                    <div style="font-size:0.72rem; color:var(--text-secondary); text-transform:uppercase; font-family:'JetBrains Mono',monospace;">Location</div>
+                    <div style="font-size:0.95rem; font-weight:600; color:#fff;">Odisha, India</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 30px; padding: 14px; border-radius: var(--radius-md); background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);">
+              <span style="font-size:0.72rem; font-family:'JetBrains Mono',monospace; color:var(--siri-green);">● ACTIVE STATUS</span>
+              <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px;">Available for interviews, collaborations, and software projects.</p>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <div class="bento-card">
+            <form class="ios-form" id="portfolioContactForm" novalidate>
+              <div class="form-group">
+                <label class="ios-label" for="userName">Name *</label>
+                <input class="ios-input" id="userName" name="name" type="text" placeholder="Your full name" required />
+              </div>
+
+              <div class="form-group">
+                <label class="ios-label" for="userEmail">Email *</label>
+                <input class="ios-input" id="userEmail" name="email" type="email" placeholder="name@domain.com" required />
+              </div>
+
+              <div class="form-group full">
+                <label class="ios-label" for="userSubject">Subject *</label>
+                <input class="ios-input" id="userSubject" name="subject" type="text" placeholder="Project inquiry or team opportunity" required />
+              </div>
+
+              <div class="form-group full">
+                <label class="ios-label" for="userMessage">Message *</label>
+                <textarea class="ios-textarea" id="userMessage" name="message" placeholder="Write your message..." required></textarea>
+              </div>
+
+              <div class="form-feedback" id="formFeedback"></div>
+
+              <div class="form-group full" style="margin-top: 6px;">
+                <button type="submit" class="ios-btn ios-btn-primary" style="width: 100%;" data-sound="action">
+                  <span>Send Message</span>
+                  <span>→</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Confirmation toast -->
+  <div class="ios-toast" id="iosToast">
+    <span style="color:var(--siri-green); font-size:1.2rem;">✓</span>
+    <span id="toastMessage">Message sent successfully!</span>
+  </div>
+
+ <!-- Footer -->
+<footer class="portfolio-footer">
+  <div class="wrap">
+
+    <div class="footer-main">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <h3>Shibam Behera<span>.</span></h3>
+        <p>Full Stack Developer</p>
+        <div class="footer-tagline">
+          Building Digital Experiences · Crafting Tomorrow
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+      </div>
+
+      <!-- Social links -->
+      <div class="footer-connect">
+        <h4>Connect With Me</h4>
+        <a href="https://www.linkedin.com/in/shibam-behera-b652251b6/"
+           target="_blank" rel="noopener noreferrer">
+          LinkedIn ↗
+        </a>
+        <a href="#contact">Contact Me ↗</a>
+        <p>📍 Odisha, India</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div>
+        © 2026 Shibam Behera. All Rights Reserved.
+      </div>
+
+      <div class="footer-controls">
+        <button class="haptic-toggle-btn active" id="soundToggleBtn">
+          <span>🔊</span>
+          <span id="soundLabel">Haptics: On</span>
+        </button>
+
+        <a href="#home" class="footer-top-btn">Back to Top ↑</a>
+      </div>
+
+     <div class="footer-credit">
+  Last Updated: November 2026
+</div>
+
+    </div>
+
+  </div>
+</footer>
+
+  <!-- Main JavaScript -->
+  <script src="./js/script.js" defer></script>
+</body>
+</html>
