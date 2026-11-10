@@ -89,25 +89,40 @@ const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const closeDrawerBtn = document.getElementById('closeDrawerBtn');
 const mobileDrawer = document.getElementById('mobileDrawer');
 
-if (mobileMenuBtn && closeDrawerBtn && mobileDrawer) {
-  mobileMenuBtn.addEventListener('click', () => {
-    mobileDrawer.classList.add('open');
-    playHapticSound('tap');
-  });
+function openMobileMenu() {
+  if (!mobileDrawer) return;
 
-  closeDrawerBtn.addEventListener('click', () => {
-    mobileDrawer.classList.remove('open');
-    playHapticSound('tap');
-  });
+  mobileDrawer.classList.add('open');
+  document.body.classList.add('menu-open');
+  mobileMenuBtn?.setAttribute('aria-expanded', 'true');
 
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileDrawer.classList.remove('open');
-      playHapticSound('tap');
-    });
-  });
+  playHapticSound('tap');
 }
 
+function closeMobileMenu() {
+  if (!mobileDrawer) return;
+
+  mobileDrawer.classList.remove('open');
+  document.body.classList.remove('menu-open');
+  mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+}
+
+mobileMenuBtn?.addEventListener('click', openMobileMenu);
+closeDrawerBtn?.addEventListener('click', () => {
+  closeMobileMenu();
+  playHapticSound('tap');
+});
+
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', closeMobileMenu);
+});
+
+// Close menu with Escape key
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    closeMobileMenu();
+  }
+});
 // Highlight the active navigation link while scrolling
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.dock-link');
